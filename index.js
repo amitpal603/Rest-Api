@@ -32,10 +32,7 @@ app.get('/get/:id',(req,res) => {
     const findData = books.find(item => item.id === req.params.id)
 
     if(findData){
-        res.status(200).json({
-            success: true,
-            data : findData
-        })
+        res.status(200).json(findData)
     }
 
     res.status(404).json({
